@@ -1,0 +1,214 @@
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\appsettings.json
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\FluxoCaixa.exe
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\FluxoCaixa.deps.json
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\FluxoCaixa.runtimeconfig.json
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\FluxoCaixa.runtimeconfig.dev.json
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\FluxoCaixa.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\ref\FluxoCaixa.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\FluxoCaixa.pdb
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\obj\Debug\net5.0\FluxoCaixa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\obj\Debug\net5.0\FluxoCaixa.AssemblyInfoInputs.cache
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\obj\Debug\net5.0\FluxoCaixa.AssemblyInfo.cs
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\obj\Debug\net5.0\FluxoCaixa.csproj.CoreCompileInputs.cache
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\obj\Debug\net5.0\FluxoCaixa.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\obj\Debug\net5.0\FluxoCaixa.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\obj\Debug\net5.0\staticwebassets\FluxoCaixa.StaticWebAssets.Manifest.cache
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\obj\Debug\net5.0\staticwebassets\FluxoCaixa.StaticWebAssets.xml
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\obj\Debug\net5.0\scopedcss\bundle\FluxoCaixa.styles.css
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\obj\Debug\net5.0\FluxoCaixa.RazorTargetAssemblyInfo.cache
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\obj\Debug\net5.0\FluxoCaixa.csproj.CopyComplete
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\obj\Debug\net5.0\FluxoCaixa.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\obj\Debug\net5.0\ref\FluxoCaixa.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\obj\Debug\net5.0\FluxoCaixa.pdb
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\obj\Debug\net5.0\FluxoCaixa.genruntimeconfig.cache
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Castle.Core.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Humanizer.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\SimpleObjectToObjectMapper.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\System.Runtime.Caching.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\andre.silva\cursosAndre\projetos\FluxoCaixa\WebApplication1\obj\Debug\net5.0\FluxoCaixa.csproj.AssemblyReference.cache
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\appsettings.json
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\FluxoCaixa.exe
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\FluxoCaixa.deps.json
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\FluxoCaixa.runtimeconfig.json
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\FluxoCaixa.runtimeconfig.dev.json
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\FluxoCaixa.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\ref\FluxoCaixa.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\FluxoCaixa.pdb
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Castle.Core.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Humanizer.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\SimpleObjectToObjectMapper.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\System.Runtime.Caching.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\obj\Debug\net5.0\FluxoCaixa.csproj.AssemblyReference.cache
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\obj\Debug\net5.0\FluxoCaixa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\obj\Debug\net5.0\FluxoCaixa.AssemblyInfoInputs.cache
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\obj\Debug\net5.0\FluxoCaixa.AssemblyInfo.cs
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\obj\Debug\net5.0\FluxoCaixa.csproj.CoreCompileInputs.cache
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\obj\Debug\net5.0\FluxoCaixa.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\obj\Debug\net5.0\FluxoCaixa.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\obj\Debug\net5.0\staticwebassets\FluxoCaixa.StaticWebAssets.Manifest.cache
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\obj\Debug\net5.0\staticwebassets\FluxoCaixa.StaticWebAssets.xml
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\obj\Debug\net5.0\scopedcss\bundle\FluxoCaixa.styles.css
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\obj\Debug\net5.0\FluxoCaixa.RazorTargetAssemblyInfo.cache
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\obj\Debug\net5.0\FluxoCaixa.csproj.CopyComplete
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\obj\Debug\net5.0\FluxoCaixa.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\obj\Debug\net5.0\ref\FluxoCaixa.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\obj\Debug\net5.0\FluxoCaixa.pdb
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\WebApplication1\obj\Debug\net5.0\FluxoCaixa.genruntimeconfig.cache
+C:\Users\andre.silva\OneDrive - MARIMEX DESPACHOS TRANSPORTES E SERVICOS LTDA\Área de Trabalho\fluxo-caixa-web-e-api-csharp-main\WebApplication1\obj\Debug\net5.0\FluxoCaixa.pdb
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\appsettings.Development.json
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\appsettings.json
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\FluxoCaixa.exe
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\FluxoCaixa.deps.json
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\FluxoCaixa.runtimeconfig.json
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\FluxoCaixa.runtimeconfig.dev.json
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\FluxoCaixa.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\ref\FluxoCaixa.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\FluxoCaixa.pdb
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\AutoMapper.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Castle.Core.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Humanizer.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\SimpleObjectToObjectMapper.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\System.Runtime.Caching.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\obj\Debug\net5.0\FluxoCaixa.GeneratedMSBuildEditorConfig.editorconfig
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\obj\Debug\net5.0\FluxoCaixa.AssemblyInfoInputs.cache
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\obj\Debug\net5.0\FluxoCaixa.AssemblyInfo.cs
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\obj\Debug\net5.0\FluxoCaixa.csproj.CoreCompileInputs.cache
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\obj\Debug\net5.0\FluxoCaixa.MvcApplicationPartsAssemblyInfo.cs
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\obj\Debug\net5.0\FluxoCaixa.MvcApplicationPartsAssemblyInfo.cache
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\obj\Debug\net5.0\staticwebassets\FluxoCaixa.StaticWebAssets.Manifest.cache
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\obj\Debug\net5.0\staticwebassets\FluxoCaixa.StaticWebAssets.xml
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\obj\Debug\net5.0\scopedcss\bundle\FluxoCaixa.styles.css
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\obj\Debug\net5.0\FluxoCaixa.RazorTargetAssemblyInfo.cache
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\obj\Debug\net5.0\FluxoCaixa.csproj.CopyComplete
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\obj\Debug\net5.0\FluxoCaixa.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\obj\Debug\net5.0\ref\FluxoCaixa.dll
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\obj\Debug\net5.0\FluxoCaixa.pdb
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\obj\Debug\net5.0\FluxoCaixa.genruntimeconfig.cache
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\obj\Debug\net5.0\FluxoCaixa.csproj.AssemblyReference.cache

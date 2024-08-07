@@ -1,0 +1,81 @@
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\bin\Debug\net5.0\appsettings.json
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\bin\Debug\net5.0\FluxoCaixaWeb.exe
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\bin\Debug\net5.0\FluxoCaixaWeb.deps.json
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\bin\Debug\net5.0\FluxoCaixaWeb.runtimeconfig.json
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\bin\Debug\net5.0\FluxoCaixaWeb.runtimeconfig.dev.json
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\bin\Debug\net5.0\FluxoCaixaWeb.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\bin\Debug\net5.0\ref\FluxoCaixaWeb.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\bin\Debug\net5.0\FluxoCaixaWeb.pdb
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\bin\Debug\net5.0\FluxoCaixaWeb.Views.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\bin\Debug\net5.0\FluxoCaixaWeb.Views.pdb
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.csproj.AssemblyReference.cache
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.AssemblyInfoInputs.cache
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.AssemblyInfo.cs
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.csproj.CoreCompileInputs.cache
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.RazorAssemblyInfo.cache
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.RazorAssemblyInfo.cs
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\staticwebassets\FluxoCaixaWeb.StaticWebAssets.Manifest.cache
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\staticwebassets\FluxoCaixaWeb.StaticWebAssets.xml
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\scopedcss\bundle\FluxoCaixaWeb.styles.css
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.TagHelpers.input.cache
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.TagHelpers.output.cache
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.RazorCoreGenerate.cache
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.RazorTargetAssemblyInfo.cache
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.RazorTargetAssemblyInfo.cs
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.Views.pdb
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\ref\FluxoCaixaWeb.dll
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.pdb
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.genruntimeconfig.cache
+C:\Users\Andre_Henrique\OneDrive\Área de Trabalho\fluxo-caixa-back-end-csharp\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.csproj.CopyComplete
+C:\Users\andre.silva\OneDrive - MARIMEX DESPACHOS TRANSPORTES E SERVICOS LTDA\Área de Trabalho\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.pdb
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\bin\Debug\net5.0\appsettings.Development.json
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\bin\Debug\net5.0\appsettings.json
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\bin\Debug\net5.0\FluxoCaixaWeb.exe
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\bin\Debug\net5.0\FluxoCaixaWeb.deps.json
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\bin\Debug\net5.0\FluxoCaixaWeb.runtimeconfig.json
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\bin\Debug\net5.0\FluxoCaixaWeb.runtimeconfig.dev.json
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\bin\Debug\net5.0\FluxoCaixaWeb.dll
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\bin\Debug\net5.0\ref\FluxoCaixaWeb.dll
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\bin\Debug\net5.0\FluxoCaixaWeb.pdb
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\bin\Debug\net5.0\FluxoCaixaWeb.Views.dll
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\bin\Debug\net5.0\FluxoCaixaWeb.Views.pdb
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.csproj.AssemblyReference.cache
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.GeneratedMSBuildEditorConfig.editorconfig
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.AssemblyInfoInputs.cache
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.AssemblyInfo.cs
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.csproj.CoreCompileInputs.cache
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.MvcApplicationPartsAssemblyInfo.cache
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.RazorAssemblyInfo.cache
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.RazorAssemblyInfo.cs
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\staticwebassets\FluxoCaixaWeb.StaticWebAssets.Manifest.cache
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\staticwebassets\FluxoCaixaWeb.StaticWebAssets.xml
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\scopedcss\bundle\FluxoCaixaWeb.styles.css
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.TagHelpers.input.cache
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.TagHelpers.output.cache
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.RazorCoreGenerate.cache
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.RazorTargetAssemblyInfo.cache
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.RazorTargetAssemblyInfo.cs
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.Views.pdb
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.dll
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\ref\FluxoCaixaWeb.dll
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.pdb
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.genruntimeconfig.cache
+C:\fluxo-caixa-web-e-api-csharp-main\FluxoCaixaWeb\obj\Debug\net5.0\FluxoCaixaWeb.csproj.CopyComplete
