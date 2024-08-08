@@ -6,20 +6,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using System;
+using FluxoCaixa.DTO;
 
 namespace FluxoCaixa.Services
 {
     public class RegistroService : IRegistroService
     {
         private readonly FluxoContext _context;
-        
+
 
         public RegistroService(FluxoContext context)
         {
             _context = context;
         }
 
-        
+
         public async Task<double> CalcularRegistroPorCategoria(int categoriaId)
         {
 
@@ -58,7 +59,7 @@ namespace FluxoCaixa.Services
             var totalCusto = await CalcularRegistroPorCusto(custoId);
             var totalRegistros = await CalcularTotalGeral();
 
-           
+
 
             if (totalRegistros == 0)
             {
@@ -70,23 +71,29 @@ namespace FluxoCaixa.Services
             return porcentagem;
         }
 
-        public async Task<(double entrada, double saida, double saldo)> CalcularRegistroPorFluxo(int idFluxo)
+        public async Task<RegistroPorFluxoDTO> CalcularRegistroPorFluxo(int idFluxo)
         {
             double entrada = 0;
             double saida = 0;
-            
 
-            entrada = await _context.Registros
-                .Where(f => f.IdFluxo == 1)
+        RegistroPorFluxoDTO response = null;
+
+        entrada = await _context.Registros
+            .Where(f => f.IdFluxo == 1)
+             .SumAsync(r => r.ValorRegistro);
+
+        saida = await _context.Registros
+            .Where(f => f.IdFluxo == 2)
                 .SumAsync(r => r.ValorRegistro);
 
-            saida = await _context.Registros
-                .Where(f => f.IdFluxo == 2)
-                .SumAsync(r => r.ValorRegistro);
+        double saldo = entrada - saida;
+        response = new RegistroPorFluxoDTO {
+            entrada = entrada,
+            saida = saida,
+            saldo = saldo
+};
 
-            double saldo = entrada - saida;
-
-            return (entrada, saida, saldo);
+            return response;
         }
     }
 }

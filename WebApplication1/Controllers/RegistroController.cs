@@ -5,6 +5,7 @@ using FluxoCaixa.Interfaces;
 using FluxoCaixa.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -17,6 +18,7 @@ namespace FluxoCaixa.Controllers
         private readonly FluxoContext _context;
         private readonly IMapper _mapper;
         private readonly IRegistroService _registroService;
+       
 
         public RegistroController(FluxoContext context, IMapper mapper, IRegistroService registroService)
         {
@@ -123,11 +125,20 @@ namespace FluxoCaixa.Controllers
                     return NotFound("Nenhum registro encontrado para a categoria especificada.");
                 }
 
+                var formatInfo = new NumberFormatInfo
+                {
+                    NumberDecimalSeparator = ",",
+                    NumberGroupSeparator = ".",
+                    NumberDecimalDigits = 2
+                };
+
+                var valorGastosCategoria = $"{valorCategoria.ToString("N", formatInfo)}";
+
                 return Ok(
                     new
                     {
                         CategoriaId = idCategoria,
-                        ValorTotalCategoria = $"R${valorCategoria:F2}"
+                        ValorTotalCategoria = $"R${valorGastosCategoria}"
                     });
             }
             catch (Exception e)
@@ -149,11 +160,20 @@ namespace FluxoCaixa.Controllers
                     return NotFound("Nenhum registro encontrado para a forma de pagamento especificada.");
                 }
 
+                var formatInfo = new NumberFormatInfo
+                {
+                    NumberDecimalSeparator = ",",
+                    NumberGroupSeparator = ".",
+                    NumberDecimalDigits = 2
+                };
+
+                var valorFormaPagemanto = $"{valorFormaDePagamento.ToString("N", formatInfo)}";
+
                 return Ok(
                    new
                    {
                        FormaDePagamentoId = idFormaDePagamento,
-                       ValorTotalFormaDePagamento = $"R${valorFormaDePagamento:F2}"
+                       ValorTotalFormaDePagamento = $"R${valorFormaPagemanto}"
                    });
             }
             catch (Exception e)
@@ -169,17 +189,27 @@ namespace FluxoCaixa.Controllers
             try
             {
                 var valorRegistroPorCusto = await _registroService.CalcularRegistroPorCusto(idCusto);
+                
 
                 if (valorRegistroPorCusto == 0)
                 {
                     return NotFound("Nenhum registro encontrado para o tipo de custo especificado.");
                 }
 
+                var formatInfo = new NumberFormatInfo
+                {
+                    NumberDecimalSeparator = ",",
+                    NumberGroupSeparator = ".",
+                    NumberDecimalDigits = 2
+                };
+
+                var valorPorCusto = $"{valorRegistroPorCusto.ToString("N",formatInfo)}";
+
                 return Ok(
                     new
                     {
                         CustoId = idCusto,
-                        ValorTotalRegistro = $"R${valorRegistroPorCusto:F2}"
+                        ValorTotalRegistro = $"R${valorPorCusto}"
                     });
             }
             catch (Exception e)
@@ -220,15 +250,24 @@ namespace FluxoCaixa.Controllers
         {
             try
             {
-                var (entrada, saida, saldo) = await _registroService.CalcularRegistroPorFluxo(idFluxo);
+                RegistroPorFluxoDTO response = await _registroService.CalcularRegistroPorFluxo(idFluxo);
+
+                var formatInfo = new NumberFormatInfo
+                {
+                    NumberDecimalSeparator = ",",
+                    NumberGroupSeparator = ".",
+                    NumberDecimalDigits = 2
+                };
+
+                
 
                 return Ok(
                     new
                     {
                         FluxoId = idFluxo,
-                        Entrada = $"R${entrada:F2}",
-                        Saida = $"R${saida:F2}",
-                        Saldo = $"R${saldo:F2}"
+                        Entrada = $"R${response.entrada.ToString("N", formatInfo)}",
+                        Saida = $"R${response.saida.ToString("N", formatInfo)}",
+                        Saldo = $"R${response.saldo.ToString("N", formatInfo)}"
                     });
             }catch (Exception e)
             {

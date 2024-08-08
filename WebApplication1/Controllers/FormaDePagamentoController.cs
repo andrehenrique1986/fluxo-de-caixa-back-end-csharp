@@ -29,12 +29,20 @@ namespace FluxoCaixa.Controllers
         public IActionResult AdicionarFormaDePagemanto(
             [FromBody] CreateFormaDePagamentoDTO formaDePagamentoDTO)
         {
-            FormaDePagamento formaDePagamento = _mapper.Map<FormaDePagamento>(formaDePagamentoDTO);
-            _context.FormasDePagamento.Add(formaDePagamento);
-            _context.SaveChanges();
-            return CreatedAtAction(nameof(RecuperarFormasDePagamentoPorId),
-                new { id = formaDePagamento.IdFormaDePagamento },
-                formaDePagamento);
+            try
+            {
+                FormaDePagamento formaDePagamento = _mapper.Map<FormaDePagamento>(formaDePagamentoDTO);
+                _context.FormasDePagamento.Add(formaDePagamento);
+                _context.SaveChanges();
+                return CreatedAtAction(nameof(RecuperarFormasDePagamentoPorId),
+                    new { id = formaDePagamento.IdFormaDePagamento },
+                    formaDePagamento);
+            }
+            catch (Exception e)
+            {
+
+                return StatusCode(500, $"Erro interno do servidor: {e.Message}");
+            } 
         }
 
 
@@ -43,64 +51,94 @@ namespace FluxoCaixa.Controllers
         [HttpGet]
         public IActionResult RecuperaFormaDePagamento()
         {
-            var formaDePagamento = _context.FormasDePagamento
-            .Select(f => new
+            try
+            {
+                var formaDePagamento = _context.FormasDePagamento
+                   .Select(f => new
             {
                 Id = f.IdFormaDePagamento,
                 Nome = f.TipoFormaDePagamento
-            }).ToList();
-            return Ok(formaDePagamento);
+                  }).ToList();
+                return Ok(formaDePagamento);
+            }
+            catch (Exception e)
+            {
 
+                return StatusCode(500, $"Erro interno do servidor: {e.Message}");
+            }
         }
 
         // Recupera as Formas de Pagamento pelo id
         [HttpGet("{id}")]
         public IActionResult RecuperarFormasDePagamentoPorId(int id)
         {
+            try
+            {
                 var formaDePagamento = _context.FormasDePagamento
                .Where(f => f.IdFormaDePagamento == id)
-              .Select(c => new
-              {
+               .Select(c => new
+                {
                   Id = c.IdFormaDePagamento,
                   Nome = c.TipoFormaDePagamento
-              }).ToList();
-            
+                 }).ToList();
+
                 if (formaDePagamento == null || formaDePagamento.Count == 0)
                 {
                     return NotFound("Nenhuma forma de pagamento encontrado para o tipo especificado.");
                 }
                 return Ok(formaDePagamento);
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, $"Erro interno do servidor: {e.Message}");
+            }
+                
         }
 
         // Realiza a Alteração das Categorias
         [HttpPut("{id}")]
         public IActionResult AtualizarFormaDePagamento(int id, [FromBody] UpdateFormaDePagamentoDTO formaDePagamentoDTO)
         {
-            FormaDePagamento formaDePagamento = _context.FormasDePagamento.FirstOrDefault(f => f.IdFormaDePagamento == id);
-            if (formaDePagamento == null)
+            try
             {
-                return NotFound();
+                FormaDePagamento formaDePagamento = _context.FormasDePagamento.FirstOrDefault(f => f.IdFormaDePagamento == id);
+                if (formaDePagamento == null)
+                {
+                    return NotFound();
+                }
+                _mapper.Map(formaDePagamentoDTO, formaDePagamento);
+                _context.SaveChanges();
+                return NoContent();
             }
-            _mapper.Map(formaDePagamentoDTO, formaDePagamento);
-            _context.SaveChanges();
-            return NoContent();
+            catch (Exception e)
+            {
+
+                return StatusCode(500, $"Erro interno do servidor: {e.Message}");
+            }
+            
         }
 
         // Exclui as Categorias
         [HttpDelete("{id}")]
         public IActionResult ExcluirFormaDePagamento(int id)
         {
-            FormaDePagamento formaDePagamento = _context.FormasDePagamento.FirstOrDefault(f => f.IdFormaDePagamento == id);
-            if (formaDePagamento == null)
+            try
             {
-                return NotFound();
+                FormaDePagamento formaDePagamento = _context.FormasDePagamento.FirstOrDefault(f => f.IdFormaDePagamento == id);
+                if (formaDePagamento == null)
+                {
+                    return NotFound();
+                }
+                _context.Remove(formaDePagamento);
+                _context.SaveChanges();
+                return NoContent();
             }
-            _context.Remove(formaDePagamento);
-            _context.SaveChanges();
-            return NoContent();
+            catch (Exception e)
+            {
+
+                return StatusCode(500, $"Erro interno do servidor: {e.Message}");
+            } 
         }
-
-
     }
 }
     

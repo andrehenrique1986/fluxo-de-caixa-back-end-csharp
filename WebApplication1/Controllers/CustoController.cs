@@ -19,32 +19,44 @@ namespace FluxoCaixa.Controllers
         [HttpGet]
         public IActionResult RecuperaCusto()
         {
-            var custo = Enum.GetValues(typeof(EnTipoCusto))
+            try
+            {
+                var custo = Enum.GetValues(typeof(EnTipoCusto))
                 .Cast<EnTipoCusto>()
                 .Select(c => new { Id = (int)c, Nome = c.GetDisplayName() })
                 .ToList();
-            return Ok(custo);
+                return Ok(custo);
+            }
+            catch (Exception e)
+            {
 
+                return StatusCode(500, $"Erro interno do servidor: {e.Message}");
+            }
         }
 
         // Recupera os Custos pelo id
         [HttpGet("{id}")]
         public IActionResult RecuperarCustosPorId(int id)
         {
-            var custo = Enum.GetValues(typeof(EnTipoCusto))
+            try
+            {
+                var custo = Enum.GetValues(typeof(EnTipoCusto))
                 .Cast<EnTipoCusto>()
                 .Select(c => new { Id = (int)c, Nome = c.GetDisplayName() })
                 .Where(c => c.Id == id)
                 .ToList();
 
-            if (custo == null || custo.Count == 0)
-            {
-                return NotFound("Nenhum custo encontrado para o tipo especificado.");
+                if (custo == null || custo.Count == 0)
+                {
+                    return NotFound("Nenhum custo encontrado para o tipo especificado.");
+                }
+                return Ok(custo);
             }
-            return Ok(custo);
-               
+            catch (Exception e)
+            {
+
+                return StatusCode(500, $"Erro interno do servidor: {e.Message}");
+            }     
         }
-
-
     }
 }
