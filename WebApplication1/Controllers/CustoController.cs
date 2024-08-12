@@ -11,12 +11,12 @@ using System.Threading.Tasks;
 namespace FluxoCaixa.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class CustoController: ControllerBase
     {
        
         // Recupera os Tipos de Custo
-        [HttpGet]
+        [HttpGet("recuperarCusto")]
         public IActionResult RecuperaCusto()
         {
             try
@@ -35,7 +35,7 @@ namespace FluxoCaixa.Controllers
         }
 
         // Recupera os Custos pelo id
-        [HttpGet("{id}")]
+        [HttpGet("recuperarCustoPorId/{id}")]
         public IActionResult RecuperarCustosPorId(int id)
         {
             try

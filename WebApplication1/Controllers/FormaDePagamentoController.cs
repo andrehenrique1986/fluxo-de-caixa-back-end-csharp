@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 namespace FluxoCaixa.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class FormaDePagamentoController : ControllerBase
     {
         private readonly FluxoContext _context;
@@ -25,7 +25,7 @@ namespace FluxoCaixa.Controllers
         }
 
         // Adiciona uma nova Forma de Pagamento
-        [HttpPost]
+        [HttpPost("adicionarFormaDePagamento")]
         public IActionResult AdicionarFormaDePagemanto(
             [FromBody] CreateFormaDePagamentoDTO formaDePagamentoDTO)
         {
@@ -48,7 +48,7 @@ namespace FluxoCaixa.Controllers
 
 
         // Recupera os Tipos de Forma de pagamento
-        [HttpGet]
+        [HttpGet("recuperarFormaDePagamento")]
         public IActionResult RecuperaFormaDePagamento()
         {
             try
@@ -69,7 +69,7 @@ namespace FluxoCaixa.Controllers
         }
 
         // Recupera as Formas de Pagamento pelo id
-        [HttpGet("{id}")]
+        [HttpGet("recuperarFormaDePagamentoPorId/{id}")]
         public IActionResult RecuperarFormasDePagamentoPorId(int id)
         {
             try
@@ -96,7 +96,7 @@ namespace FluxoCaixa.Controllers
         }
 
         // Realiza a Alteração das Categorias
-        [HttpPut("{id}")]
+        [HttpPut("atualizarFormaDePagamento/{id}")]
         public IActionResult AtualizarFormaDePagamento(int id, [FromBody] UpdateFormaDePagamentoDTO formaDePagamentoDTO)
         {
             try
@@ -119,7 +119,7 @@ namespace FluxoCaixa.Controllers
         }
 
         // Exclui as Categorias
-        [HttpDelete("{id}")]
+        [HttpDelete("excluirFormaDePagamento/{id}")]
         public IActionResult ExcluirFormaDePagamento(int id)
         {
             try

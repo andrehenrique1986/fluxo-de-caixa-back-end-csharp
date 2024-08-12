@@ -12,7 +12,7 @@ using WebApplication1.Models;
 namespace FluxoCaixa.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class CategoriaController: ControllerBase
     {
         private readonly FluxoContext _context;
@@ -26,7 +26,7 @@ namespace FluxoCaixa.Controllers
 
       
         // Adiciona uma nova Categoria
-        [HttpPost]
+        [HttpPost("adicionarCategoria")]
         public IActionResult AdicionarCategoria(
             [FromBody] CreateCategoriaDTO categoriaDTO)
         {
@@ -47,7 +47,7 @@ namespace FluxoCaixa.Controllers
         }
 
 
-        [HttpGet]
+        [HttpGet("recuperarCategoria")]
         public IActionResult RecuperaCategoria()
         {
             try
@@ -80,7 +80,7 @@ namespace FluxoCaixa.Controllers
 
 
         // Recupera todas as Categorias pelo Id
-        [HttpGet("{id}")]
+        [HttpGet("recuperarCategoriaPorId/{id}")]
         public IActionResult RecuperarCategoriasPorId(int id)
         {
             try
@@ -112,7 +112,7 @@ namespace FluxoCaixa.Controllers
         }
 
         // Realiza a Alteração das Categorias
-        [HttpPut("{id}")]
+        [HttpPut("atualizarCategoria/{id}")]
         public IActionResult AtualizarCategoria(int id, [FromBody] UpdateCategoriaDTO categoriaDto)
         {
             try
@@ -134,7 +134,7 @@ namespace FluxoCaixa.Controllers
         }
 
         // Exclui as Categorias
-        [HttpDelete("{id}")]
+        [HttpDelete("excluirCategoria/{id}")]
         public IActionResult ExcluirCategoria(int id)
         {
             try

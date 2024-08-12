@@ -12,13 +12,12 @@ using System.Threading.Tasks;
 namespace FluxoCaixa.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class RegistroController : ControllerBase
     {
         private readonly FluxoContext _context;
         private readonly IMapper _mapper;
         private readonly IRegistroService _registroService;
-       
 
         public RegistroController(FluxoContext context, IMapper mapper, IRegistroService registroService)
         {
@@ -28,10 +27,12 @@ namespace FluxoCaixa.Controllers
         }
 
         // Adiciona um novo Registro
-        [HttpPost]
+        [HttpPost("adicionarRegistro")]
         public IActionResult AdicionarRegistro([FromBody] CreateRegistroDTO registroDTO)
         {
-            Registro registro = _mapper.Map<Registro>(registroDTO);
+            if (registroDTO == null) return BadRequest("Dados do registro não fornecidos.");
+
+            var registro = _mapper.Map<Registro>(registroDTO);
             _context.Registros.Add(registro);
             _context.SaveChanges();
             return CreatedAtAction(nameof(RecuperarRegistrosPorId),
@@ -40,32 +41,10 @@ namespace FluxoCaixa.Controllers
         }
 
         // Recupera todos os Registros
-        [HttpGet]
-        public IActionResult RecuperaRegistro()
+        [HttpGet("recuperarRegistro")]
+        public IActionResult RecuperarRegistros()
         {
             var registros = _context.Registros
-                .Select(r =>
-                new
-                {
-                    Id = r.IdRegistro,
-                    DataRegistro = r.DtRegistro,
-                    CategoriaId = r.IdCategoria,
-                    SubcategoriaId = r.IdSubcategoria,
-                    CustoId = r.IdCusto,
-                    FluxoId = r.IdFluxo,
-                    FormaDePagamento = r.IdFormaDePagamento,
-                    Valor = r.ValorRegistro
-                }).ToList();
-            if (registros == null || !registros.Any()) return NotFound();
-            return Ok(registros);
-        }
-
-        // Recupera registros pelo Id
-        [HttpGet("{id}")]
-        public IActionResult RecuperarRegistrosPorId(int id)
-        {
-            var registros = _context.Registros
-                .Where(r => r.IdRegistro == id)
                 .Select(r =>
                 new
                 {
@@ -78,36 +57,55 @@ namespace FluxoCaixa.Controllers
                     FormaDePagamentoId = r.IdFormaDePagamento,
                     Valor = r.ValorRegistro
                 }).ToList();
-            if (registros == null || !registros.Any()) return NotFound();
+            if (!registros.Any()) return NotFound("Nenhum registro encontrado.");
             return Ok(registros);
         }
 
+        // Recupera registros pelo Id
+        [HttpGet("recuperarRegistroPorId/{id}")]
+        public IActionResult RecuperarRegistrosPorId(int id)
+        {
+            var registro = _context.Registros
+                .Where(r => r.IdRegistro == id)
+                .Select(r =>
+                new
+                {
+                    Id = r.IdRegistro,
+                    DataRegistro = r.DtRegistro,
+                    CategoriaId = r.IdCategoria,
+                    SubcategoriaId = r.IdSubcategoria,
+                    CustoId = r.IdCusto,
+                    FluxoId = r.IdFluxo,
+                    FormaDePagamentoId = r.IdFormaDePagamento,
+                    Valor = r.ValorRegistro
+                }).FirstOrDefault();
+            if (registro == null) return NotFound($"Registro com ID {id} não encontrado.");
+            return Ok(registro);
+        }
+
         // Realiza a Alteração dos Registros
-        [HttpPut("{id}")]
+        [HttpPut("atualizarRegistro/{id}")]
         public IActionResult AtualizarRegistro(int id, [FromBody] UpdateRegistroDTO registroDto)
         {
-            Registro registro = _context.Registros.FirstOrDefault(registro => registro.IdRegistro == id);
-            if (registro == null)
-            {
-                return NotFound();
-            }
+            if (registroDto == null) return BadRequest("Dados do registro não fornecidos.");
 
-            _context.Entry<Registro>(registro).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            var registro = _context.Registros.FirstOrDefault(r => r.IdRegistro == id);
+            if (registro == null) return NotFound($"Registro com ID {id} não encontrado.");
+
             _mapper.Map(registroDto, registro);
+            _context.Entry(registro).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             _context.SaveChanges();
             return NoContent();
         }
 
         // Exclui os Registros
-        [HttpDelete("{id}")]
+        [HttpDelete("excluirRegistro/{id}")]
         public IActionResult ExcluirRegistro(int id)
         {
-            Registro registro = _context.Registros.FirstOrDefault(r => r.IdRegistro == id);
-            if (registro == null)
-            {
-                return NotFound();
-            }
-            _context.Remove(registro);
+            var registro = _context.Registros.FirstOrDefault(r => r.IdRegistro == id);
+            if (registro == null) return NotFound($"Registro com ID {id} não encontrado.");
+
+            _context.Registros.Remove(registro);
             _context.SaveChanges();
             return NoContent();
         }
@@ -120,10 +118,7 @@ namespace FluxoCaixa.Controllers
             {
                 var valorCategoria = await _registroService.CalcularRegistroPorCategoria(idCategoria);
 
-                if (valorCategoria == 0)
-                {
-                    return NotFound("Nenhum registro encontrado para a categoria especificada.");
-                }
+                if (valorCategoria == 0) return NotFound("Nenhum registro encontrado para a categoria especificada.");
 
                 var formatInfo = new NumberFormatInfo
                 {
@@ -134,12 +129,11 @@ namespace FluxoCaixa.Controllers
 
                 var valorGastosCategoria = $"{valorCategoria.ToString("N", formatInfo)}";
 
-                return Ok(
-                    new
-                    {
-                        CategoriaId = idCategoria,
-                        ValorTotalCategoria = $"R${valorGastosCategoria}"
-                    });
+                return Ok(new
+                {
+                    CategoriaId = idCategoria,
+                    ValorTotalCategoria = $"R${valorGastosCategoria}"
+                });
             }
             catch (Exception e)
             {
@@ -155,10 +149,7 @@ namespace FluxoCaixa.Controllers
             {
                 var valorFormaDePagamento = await _registroService.CalcularRegistroPorFormaDePagamento(idFormaDePagamento);
 
-                if (valorFormaDePagamento == 0)
-                {
-                    return NotFound("Nenhum registro encontrado para a forma de pagamento especificada.");
-                }
+                if (valorFormaDePagamento == 0) return NotFound("Nenhum registro encontrado para a forma de pagamento especificada.");
 
                 var formatInfo = new NumberFormatInfo
                 {
@@ -167,14 +158,13 @@ namespace FluxoCaixa.Controllers
                     NumberDecimalDigits = 2
                 };
 
-                var valorFormaPagemanto = $"{valorFormaDePagamento.ToString("N", formatInfo)}";
+                var valorFormaPagamento = $"{valorFormaDePagamento.ToString("N", formatInfo)}";
 
-                return Ok(
-                   new
-                   {
-                       FormaDePagamentoId = idFormaDePagamento,
-                       ValorTotalFormaDePagamento = $"R${valorFormaPagemanto}"
-                   });
+                return Ok(new
+                {
+                    FormaDePagamentoId = idFormaDePagamento,
+                    ValorTotalFormaDePagamento = $"R${valorFormaPagamento}"
+                });
             }
             catch (Exception e)
             {
@@ -189,12 +179,8 @@ namespace FluxoCaixa.Controllers
             try
             {
                 var valorRegistroPorCusto = await _registroService.CalcularRegistroPorCusto(idCusto);
-                
 
-                if (valorRegistroPorCusto == 0)
-                {
-                    return NotFound("Nenhum registro encontrado para o tipo de custo especificado.");
-                }
+                if (valorRegistroPorCusto == 0) return NotFound("Nenhum registro encontrado para o tipo de custo especificado.");
 
                 var formatInfo = new NumberFormatInfo
                 {
@@ -203,14 +189,13 @@ namespace FluxoCaixa.Controllers
                     NumberDecimalDigits = 2
                 };
 
-                var valorPorCusto = $"{valorRegistroPorCusto.ToString("N",formatInfo)}";
+                var valorPorCusto = $"{valorRegistroPorCusto.ToString("N", formatInfo)}";
 
-                return Ok(
-                    new
-                    {
-                        CustoId = idCusto,
-                        ValorTotalRegistro = $"R${valorPorCusto}"
-                    });
+                return Ok(new
+                {
+                    CustoId = idCusto,
+                    ValorTotalRegistro = $"R${valorPorCusto}"
+                });
             }
             catch (Exception e)
             {
@@ -226,17 +211,13 @@ namespace FluxoCaixa.Controllers
             {
                 var percentualPorCusto = await _registroService.CalcularPorcentagemPorCusto(idCusto);
 
-                if (percentualPorCusto == null)
-                {
-                    return NotFound("Nenhuma porcentagem encontrada para o tipo de custo especificado.");
-                }
+                if (percentualPorCusto == null) return NotFound("Nenhuma porcentagem encontrada para o tipo de custo especificado.");
 
-                return Ok(
-                    new
-                    {
-                        CustoId = idCusto,
-                        ValorTotalRegistro = $"{percentualPorCusto:F0}%"
-                    });
+                return Ok(new
+                {
+                    CustoId = idCusto,
+                    ValorTotalRegistro = $"{percentualPorCusto:F0}%"
+                });
             }
             catch (Exception e)
             {
@@ -244,13 +225,13 @@ namespace FluxoCaixa.Controllers
             }
         }
 
-        
+        // Calcula Registros por Fluxo
         [HttpGet("calcularRegistroPorFluxo/{idFluxo}")]
         public async Task<IActionResult> CalcularRegistroPorFluxo(int idFluxo)
         {
             try
             {
-                RegistroPorFluxoDTO response = await _registroService.CalcularRegistroPorFluxo(idFluxo);
+                var response = await _registroService.CalcularRegistroPorFluxo(idFluxo);
 
                 var formatInfo = new NumberFormatInfo
                 {
@@ -259,17 +240,15 @@ namespace FluxoCaixa.Controllers
                     NumberDecimalDigits = 2
                 };
 
-                
-
-                return Ok(
-                    new
-                    {
-                        FluxoId = idFluxo,
-                        Entrada = $"R${response.entrada.ToString("N", formatInfo)}",
-                        Saida = $"R${response.saida.ToString("N", formatInfo)}",
-                        Saldo = $"R${response.saldo.ToString("N", formatInfo)}"
-                    });
-            }catch (Exception e)
+                return Ok(new
+                {
+                    FluxoId = idFluxo,
+                    Entrada = $"R${response.entrada.ToString("N", formatInfo)}",
+                    Saida = $"R${response.saida.ToString("N", formatInfo)}",
+                    Saldo = $"R${response.saldo.ToString("N", formatInfo)}"
+                });
+            }
+            catch (Exception e)
             {
                 return StatusCode(500, $"Erro interno do servidor: {e.Message}");
             }

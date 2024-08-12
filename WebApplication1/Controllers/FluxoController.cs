@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 namespace FluxoCaixa.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class FluxoController: ControllerBase
     {
 
 
 
         // Recupera os Tipos de Fluxo
-        [HttpGet]
+        [HttpGet("recuperarFluxo")]
         public IActionResult RecuperaFluxo()
         {
             try
@@ -36,7 +36,7 @@ namespace FluxoCaixa.Controllers
         }
 
         // Recupera os Fluxos pelo id
-        [HttpGet("{id}")]
+        [HttpGet("recuperarFluxoPorId/{id}")]
         public IActionResult RecuperarFluxosPorId(int id)
         {
             try

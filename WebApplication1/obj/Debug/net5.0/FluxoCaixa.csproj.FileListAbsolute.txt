@@ -211,3 +211,4 @@ C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\obj\Debug\net5.0\FluxoCaixa
 C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\obj\Debug\net5.0\ref\FluxoCaixa.dll
 C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\obj\Debug\net5.0\FluxoCaixa.pdb
 C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\obj\Debug\net5.0\FluxoCaixa.genruntimeconfig.cache
+C:\fluxo-caixa-web-e-api-csharp-main\WebApplication1\obj\Debug\net5.0\FluxoCaixa.csproj.AssemblyReference.cache

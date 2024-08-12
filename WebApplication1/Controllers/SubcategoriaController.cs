@@ -12,7 +12,7 @@ using WebApplication1.Models;
 namespace FluxoCaixa.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class SubcategoriaController: ControllerBase
     {
         private readonly FluxoContext _context;
@@ -25,7 +25,7 @@ namespace FluxoCaixa.Controllers
         }
 
         // Adiciona uma nova Subcategoria
-        [HttpPost]
+        [HttpPost("adicionarSubcategoria")]
         public IActionResult AdicionarSubcategoria(
             [FromBody] CreateSubcategoriaDTO subcategoriaDTO)
         {
@@ -46,7 +46,7 @@ namespace FluxoCaixa.Controllers
             
         }
 
-        [HttpGet]
+        [HttpGet("recuperarSubcategoria")]
         public IActionResult RecuperaSubcategoria()
         {
             try
@@ -74,7 +74,7 @@ namespace FluxoCaixa.Controllers
 
 
         // Recupera todas as Categorias pelo Id
-        [HttpGet("{id}")]
+        [HttpGet("recuperarSubcategoriaPorId/{id}")]
         public IActionResult RecuperarSubcategoriasPorId(int id)
         {
             try
@@ -100,7 +100,7 @@ namespace FluxoCaixa.Controllers
         }
 
         // Realiza a Alteração das Categorias
-        [HttpPut("{id}")]
+        [HttpPut("atualizarSubcategoria/{id}")]
         public IActionResult AtualizarSubcategoria(int id, [FromBody] UpdateSubcategoriaDTO subcategoriaDto)
         {
             try
@@ -123,7 +123,7 @@ namespace FluxoCaixa.Controllers
         }
 
         // Exclui as Categorias
-        [HttpDelete("{id}")]
+        [HttpDelete("excluirSubcategoria/{id}")]
         public IActionResult ExcluirSubcategoria(int id)
         {
             try
