@@ -124,7 +124,7 @@ namespace FluxoCaixa.Controllers
         }
 
         // Calcula os Gastos por Categoria
-        [HttpGet("calcularGastosPorCategoria/{idCategoria}")]
+        [HttpGet("api/calcularGastosPorCategoria/{idCategoria}")]
         public async Task<IActionResult> CalcularGastosPorCategoria(int idCategoria)
         {
             try

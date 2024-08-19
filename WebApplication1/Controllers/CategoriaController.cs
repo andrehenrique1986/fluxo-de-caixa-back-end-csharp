@@ -111,6 +111,8 @@ namespace FluxoCaixa.Controllers
             }  
         }
 
+       
+
         // Realiza a Alteração das Categorias
         [HttpPut("api/atualizarCategoria/{id}")]
         public IActionResult AtualizarCategoria(int id, [FromBody] UpdateCategoriaDTO categoriaDto)

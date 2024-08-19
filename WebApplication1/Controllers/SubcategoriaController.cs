@@ -12,11 +12,7 @@ using WebApplication1.Models;
 namespace FluxoCaixa.Controllers
 {
     [ApiController]
-<<<<<<< HEAD
     [Route("[controller]")]
-=======
-    [Route("api/[controller]")]
->>>>>>> a334876b6fb40ec993e9dd28f4c81cfc1bb2be29
     public class SubcategoriaController: ControllerBase
     {
         private readonly FluxoContext _context;
@@ -29,11 +25,7 @@ namespace FluxoCaixa.Controllers
         }
 
         // Adiciona uma nova Subcategoria
-<<<<<<< HEAD
         [HttpPost("api/adicionarSubcategoria")]
-=======
-        [HttpPost("adicionarSubcategoria")]
->>>>>>> a334876b6fb40ec993e9dd28f4c81cfc1bb2be29
         public IActionResult AdicionarSubcategoria(
             [FromBody] CreateSubcategoriaDTO subcategoriaDTO)
         {
@@ -54,13 +46,8 @@ namespace FluxoCaixa.Controllers
             
         }
 
-<<<<<<< HEAD
         [HttpGet("api/recuperarSubcategoria")]
         public IActionResult RecuperarSubcategoria()
-=======
-        [HttpGet("recuperarSubcategoria")]
-        public IActionResult RecuperaSubcategoria()
->>>>>>> a334876b6fb40ec993e9dd28f4c81cfc1bb2be29
         {
             try
             {
@@ -68,15 +55,10 @@ namespace FluxoCaixa.Controllers
                 .Include(s => s.Categoria)
                 .Select(s => new
                 {
-<<<<<<< HEAD
                     IdDaSubcategoria = s.IdSubcategoria,
                     NomeDaSubcategoria = s.DscTipoSubcategoria,
+                    IdDaCategoria = s.IdCategoria,
                     NomeDaCategoria = s.Categoria.DscTipoCategoria
-=======
-                    Id = s.IdSubcategoria,
-                    Nome = s.DscTipoSubcategoria,
-                    CategoriaNome = s.Categoria.DscTipoCategoria
->>>>>>> a334876b6fb40ec993e9dd28f4c81cfc1bb2be29
                 })
                 .ToList();
                 if (subcategorias == null) return NotFound();
@@ -93,11 +75,7 @@ namespace FluxoCaixa.Controllers
 
 
         // Recupera todas as Categorias pelo Id
-<<<<<<< HEAD
         [HttpGet("api/recuperarSubcategoriaPorId/{id}")]
-=======
-        [HttpGet("recuperarSubcategoriaPorId/{id}")]
->>>>>>> a334876b6fb40ec993e9dd28f4c81cfc1bb2be29
         public IActionResult RecuperarSubcategoriasPorId(int id)
         {
             try
@@ -107,15 +85,10 @@ namespace FluxoCaixa.Controllers
                 .Where(s => s.IdSubcategoria == id)
                 .Select(s =>
                 new {
-<<<<<<< HEAD
                     IdDaSubcategoria = s.IdSubcategoria,
                     NomeDaSubcategoria = s.DscTipoSubcategoria,
+                    IdDaCategoria = s.IdCategoria,
                     NomeDaCategoria = s.Categoria.DscTipoCategoria
-=======
-                    s.IdSubcategoria,
-                    s.DscTipoSubcategoria,
-                    CategoriaNome = s.Categoria.DscTipoCategoria
->>>>>>> a334876b6fb40ec993e9dd28f4c81cfc1bb2be29
                 }).ToList();
                 if (subcategorias == null) return NotFound();
                 return Ok(subcategorias);
@@ -129,11 +102,7 @@ namespace FluxoCaixa.Controllers
         }
 
         // Realiza a Alteração das Categorias
-<<<<<<< HEAD
         [HttpPut("api/atualizarSubcategoria/{id}")]
-=======
-        [HttpPut("atualizarSubcategoria/{id}")]
->>>>>>> a334876b6fb40ec993e9dd28f4c81cfc1bb2be29
         public IActionResult AtualizarSubcategoria(int id, [FromBody] UpdateSubcategoriaDTO subcategoriaDto)
         {
             try
@@ -156,11 +125,7 @@ namespace FluxoCaixa.Controllers
         }
 
         // Exclui as Categorias
-<<<<<<< HEAD
         [HttpDelete("api/excluirSubcategoria/{id}")]
-=======
-        [HttpDelete("excluirSubcategoria/{id}")]
->>>>>>> a334876b6fb40ec993e9dd28f4c81cfc1bb2be29
         public IActionResult ExcluirSubcategoria(int id)
         {
             try
