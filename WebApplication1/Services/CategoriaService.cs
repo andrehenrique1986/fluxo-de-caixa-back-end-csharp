@@ -2,13 +2,12 @@
 using FluxoCaixa.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace FluxoCaixa.Services
 {
-    public class CategoriaService: ICategoriaService
+    public class CategoriaService : ICategoriaService
     {
         private readonly FluxoContext _context;
 
@@ -19,20 +18,29 @@ namespace FluxoCaixa.Services
 
         public async Task<int> ExcluirCategoriaETodasSubcategorias(int idCategoria)
         {
-            var categorias = await _context.Categorias
+            // Obter a categoria com suas subcategorias
+            var categoria = await _context.Categorias
                 .Include(c => c.Subcategorias)
                 .SingleOrDefaultAsync(c => c.IdCategoria == idCategoria);
 
-            if (categorias == null)
+            // Se a categoria não for encontrada, retornar 0
+            if (categoria == null)
             {
                 return 0;
             }
 
-            _context.Subcategorias.RemoveRange(categorias.Subcategorias);
+            // Remover as subcategorias associadas
+            if (categoria.Subcategorias.Any())
+            {
+                _context.Subcategorias.RemoveRange(categoria.Subcategorias);
+            }
 
-            _context.Categorias.Remove(categorias);
+            // Remover a categoria
+            _context.Categorias.Remove(categoria);
 
+            // Salvar as mudanças e retornar o número de registros afetados
             return await _context.SaveChangesAsync();
         }
     }
 }
+

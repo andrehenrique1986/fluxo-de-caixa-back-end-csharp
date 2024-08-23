@@ -14,7 +14,7 @@ namespace FluxoCaixa.Profiles
         {
             CreateMap<CreateSubcategoriaDTO, Subcategoria>();
             CreateMap<Subcategoria, ReadSubcategoriaDTO>();
-            CreateMap<Subcategoria, UpdateSubcategoriaDTO>();
+            CreateMap<UpdateSubcategoriaDTO, Subcategoria>();
 
             CreateMap<Subcategoria, ReadSubcategoriaDTO>().
                 ForMember(subcategoriaDto => subcategoriaDto.Registros,

@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApplication1.Models;
+using FluxoCaixa.Models;
 
 namespace FluxoCaixa.Controllers
 {
@@ -127,34 +128,7 @@ namespace FluxoCaixa.Controllers
             
         }
 
-
-        [HttpDelete("api/excluirSubcategoriaPorCategoria/{idCategoria}")]
-        public async Task<IActionResult> ExcluirSubcategoriaPorCategoria(int idCategoria)
-        {
-            try
-            {
-                if (idCategoria <= 0)
-                {
-                    return BadRequest("Id inválido.");
-                }
-
-                var result = await _service.ExcluirSubcategoriaPorCategoria(idCategoria);
-
-                if (result > 0)
-                {
-                    return Ok("As subcategorias foram excluídas com sucesso.");
-                } else
-                {
-                    return NotFound("Erro ao excluir as subcategorias");
-                }
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, $"Erro interno do servidor: {e.Message}");
-            }
-        }
-
-        // Exclui as Categorias
+        // Exclui as Subcategorias
         [HttpDelete("api/excluirSubcategoria/{id}")]
         public IActionResult ExcluirSubcategoria(int id)
         {

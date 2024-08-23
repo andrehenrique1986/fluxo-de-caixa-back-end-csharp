@@ -139,31 +139,36 @@ namespace FluxoCaixa.Controllers
             } 
         }
 
-        // Exclui as Categorias
         [HttpDelete("api/excluirCategoria/{id}")]
         public async Task<IActionResult> ExcluirCategoria(int id)
         {
+            // Verifica se o ID fornecido é válido
+            if (id <= 0)
+            {
+                return BadRequest("ID inválido.");
+            }
+
             try
             {
-                if (id <= 0)
-                {
-                    return BadRequest("Id inválido.");
-                }
-
+                // Chama o serviço para excluir a categoria e suas subcategorias
                 var result = await _service.ExcluirCategoriaETodasSubcategorias(id);
+
+                // Verifica o resultado da exclusão
                 if (result > 0)
                 {
                     return Ok("Categoria e suas subcategorias foram excluídas com sucesso.");
-                } else
+                }
+                else
                 {
                     return NotFound("Categoria não encontrada.");
                 }
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-
-                return StatusCode(500, $"Erro interno do servidor: {e.Message}");
+                // Captura exceções e retorna um status de erro interno do servidor
+                return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
             }
         }
+
     }
 }

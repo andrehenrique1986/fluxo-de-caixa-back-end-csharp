@@ -8,5 +8,6 @@ namespace FluxoCaixa.Interfaces
     public interface ISubcategoriaService
     {
         Task<int> ExcluirSubcategoriaPorCategoria(int idCategoria);
+
     }
 }
