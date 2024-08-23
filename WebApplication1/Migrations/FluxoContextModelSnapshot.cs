@@ -75,6 +75,9 @@ namespace FluxoCaixa.Migrations
                     b.Property<DateTime>("DtRegistro")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("Fk_IdFluxoRegistro")
+                        .HasColumnType("int");
+
                     b.Property<int>("IdCategoria")
                         .HasColumnType("int");
 
@@ -132,20 +135,17 @@ namespace FluxoCaixa.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int?>("CategoriaIdCategoria")
-                        .HasColumnType("int");
-
                     b.Property<string>("DscTipoSubcategoria")
                         .IsRequired()
                         .HasMaxLength(40)
                         .HasColumnType("nvarchar(40)");
 
-                    b.Property<int?>("IdCategoria")
+                    b.Property<int>("IdCategoria")
                         .HasColumnType("int");
 
                     b.HasKey("IdSubcategoria");
 
-                    b.HasIndex("CategoriaIdCategoria");
+                    b.HasIndex("IdCategoria");
 
                     b.ToTable("Subcategoria");
                 });
@@ -155,31 +155,31 @@ namespace FluxoCaixa.Migrations
                     b.HasOne("WebApplication1.Models.Categoria", "Categoria")
                         .WithMany("Registros")
                         .HasForeignKey("IdCategoria")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("FluxoCaixa.Models.Custo", "Custo")
                         .WithMany("Registros")
                         .HasForeignKey("IdCusto")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("FluxoCaixa.Models.Fluxo", "Fluxo")
                         .WithMany("Registros")
                         .HasForeignKey("IdFluxo")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("FluxoCaixa.Models.FormaDePagamento", "FormaDePagamento")
                         .WithMany("Registros")
                         .HasForeignKey("IdFormaDePagamento")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("WebApplication1.Models.Subcategoria", "Subcategoria")
                         .WithMany("Registros")
                         .HasForeignKey("IdSubcategoria")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Categoria");
@@ -197,7 +197,9 @@ namespace FluxoCaixa.Migrations
                 {
                     b.HasOne("WebApplication1.Models.Categoria", "Categoria")
                         .WithMany("Subcategorias")
-                        .HasForeignKey("CategoriaIdCategoria");
+                        .HasForeignKey("IdCategoria")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Categoria");
                 });

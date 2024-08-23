@@ -32,7 +32,7 @@ namespace FluxoCaixa.Migrations
                 column: "IdCategoria",
                 principalTable: "Categoria",
                 principalColumn: "IdCategoria",
-                onDelete: ReferentialAction.Restrict);
+                onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Registro_Custo_IdCusto",
@@ -40,7 +40,7 @@ namespace FluxoCaixa.Migrations
                 column: "IdCusto",
                 principalTable: "Custo",
                 principalColumn: "IdCusto",
-                onDelete: ReferentialAction.Restrict);
+                onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Registro_Fluxo_IdFluxo",
@@ -48,7 +48,7 @@ namespace FluxoCaixa.Migrations
                 column: "IdFluxo",
                 principalTable: "Fluxo",
                 principalColumn: "IdFluxo",
-                onDelete: ReferentialAction.Restrict);
+                onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Registro_FormaDePagamento_IdFormaDePagamento",
@@ -56,7 +56,7 @@ namespace FluxoCaixa.Migrations
                 column: "IdFormaDePagamento",
                 principalTable: "FormaDePagamento",
                 principalColumn: "IdFormaDePagamento",
-                onDelete: ReferentialAction.Restrict);
+                onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Registro_Subcategoria_IdSubcategoria",
@@ -64,7 +64,7 @@ namespace FluxoCaixa.Migrations
                 column: "IdSubcategoria",
                 principalTable: "Subcategoria",
                 principalColumn: "IdSubcategoria",
-                onDelete: ReferentialAction.Restrict);
+                onDelete: ReferentialAction.Cascade);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -95,7 +95,7 @@ namespace FluxoCaixa.Migrations
                 column: "IdCategoria",
                 principalTable: "Categoria",
                 principalColumn: "IdCategoria",
-                onDelete: ReferentialAction.Restrict);
+                onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Registro_Custo_IdCusto",
@@ -103,7 +103,7 @@ namespace FluxoCaixa.Migrations
                 column: "IdCusto",
                 principalTable: "Custo",
                 principalColumn: "IdCusto",
-                onDelete: ReferentialAction.Restrict);
+                onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Registro_Fluxo_IdFluxo",
@@ -111,7 +111,7 @@ namespace FluxoCaixa.Migrations
                 column: "IdFluxo",
                 principalTable: "Fluxo",
                 principalColumn: "IdFluxo",
-                onDelete: ReferentialAction.Restrict);
+                onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Registro_FormaDePagamento_IdFormaDePagamento",
@@ -119,7 +119,7 @@ namespace FluxoCaixa.Migrations
                 column: "IdFormaDePagamento",
                 principalTable: "FormaDePagamento",
                 principalColumn: "IdFormaDePagamento",
-                onDelete: ReferentialAction.Restrict);
+                onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Registro_Subcategoria_IdSubcategoria",
@@ -127,7 +127,7 @@ namespace FluxoCaixa.Migrations
                 column: "IdSubcategoria",
                 principalTable: "Subcategoria",
                 principalColumn: "IdSubcategoria",
-                onDelete: ReferentialAction.Restrict);
+                onDelete: ReferentialAction.Cascade);
         }
     }
 }

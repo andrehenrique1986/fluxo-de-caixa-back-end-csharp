@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApplication1.Models;
+using FluxoCaixa.Models;
+using FluxoCaixa.Interfaces;
 
 namespace FluxoCaixa.Controllers
 {
@@ -17,11 +19,13 @@ namespace FluxoCaixa.Controllers
     {
         private readonly FluxoContext _context;
         private readonly IMapper _mapper;
+        private readonly ICategoriaService _service;
 
-        public CategoriaController(FluxoContext context, IMapper mapper)
+        public CategoriaController(FluxoContext context, IMapper mapper, ICategoriaService service)
         {
             _context = context;
             _mapper = mapper;
+            _service = service;
         }
 
       
@@ -137,18 +141,23 @@ namespace FluxoCaixa.Controllers
 
         // Exclui as Categorias
         [HttpDelete("api/excluirCategoria/{id}")]
-        public IActionResult ExcluirCategoria(int id)
+        public async Task<IActionResult> ExcluirCategoria(int id)
         {
             try
             {
-                Categoria categoria = _context.Categorias.FirstOrDefault(c => c.IdCategoria == id);
-                if (categoria == null)
+                if (id <= 0)
                 {
-                    return NotFound();
+                    return BadRequest("Id inválido.");
                 }
-                _context.Remove(categoria);
-                _context.SaveChanges();
-                return NoContent();
+
+                var result = await _service.ExcluirCategoriaETodasSubcategorias(id);
+                if (result > 0)
+                {
+                    return Ok("Categoria e suas subcategorias foram excluídas com sucesso.");
+                } else
+                {
+                    return NotFound("Categoria não encontrada.");
+                }
             }
             catch (Exception e)
             {

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using FluxoCaixa.Context;
 using FluxoCaixa.DTO;
+using FluxoCaixa.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -16,12 +17,14 @@ namespace FluxoCaixa.Controllers
     public class SubcategoriaController: ControllerBase
     {
         private readonly FluxoContext _context;
+        private readonly ISubcategoriaService _service;
         private readonly IMapper _mapper;
 
-        public SubcategoriaController(FluxoContext context, IMapper mapper)
+        public SubcategoriaController(FluxoContext context, IMapper mapper, ISubcategoriaService service)
         {
             _context = context;
             _mapper = mapper;
+            _service = service;
         }
 
         // Adiciona uma nova Subcategoria
@@ -122,6 +125,33 @@ namespace FluxoCaixa.Controllers
                 return StatusCode(500, $"Erro interno do servidor: {e.Message}");
             }
             
+        }
+
+
+        [HttpDelete("api/excluirSubcategoriaPorCategoria/{idCategoria}")]
+        public async Task<IActionResult> ExcluirSubcategoriaPorCategoria(int idCategoria)
+        {
+            try
+            {
+                if (idCategoria <= 0)
+                {
+                    return BadRequest("Id inválido.");
+                }
+
+                var result = await _service.ExcluirSubcategoriaPorCategoria(idCategoria);
+
+                if (result > 0)
+                {
+                    return Ok("As subcategorias foram excluídas com sucesso.");
+                } else
+                {
+                    return NotFound("Erro ao excluir as subcategorias");
+                }
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, $"Erro interno do servidor: {e.Message}");
+            }
         }
 
         // Exclui as Categorias

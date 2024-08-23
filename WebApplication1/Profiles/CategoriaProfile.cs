@@ -13,7 +13,7 @@ namespace FluxoCaixa.Profiles
         public CategoriaProfile()
         {
             CreateMap<CreateCategoriaDTO, Categoria>();
-            CreateMap<UpdateCategoriaDTO, Categoria>();
+            CreateMap<Categoria, ReadCategoriaDTO>();
             CreateMap<Categoria, UpdateCategoriaDTO>();
 
             CreateMap<Categoria, ReadCategoriaDTO>().

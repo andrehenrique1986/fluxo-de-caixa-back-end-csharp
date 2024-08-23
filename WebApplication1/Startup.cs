@@ -39,7 +39,11 @@ namespace WebApplication1
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "FluxoCaixa", Version = "v1" });
             });
 
+
+            services.AddScoped<ICategoriaService, CategoriaService>();
+            services.AddScoped<ISubcategoriaService, SubcategoriaService>();
             services.AddScoped<IRegistroService, RegistroService>();
+            
 
             services.AddCors(options =>
             {

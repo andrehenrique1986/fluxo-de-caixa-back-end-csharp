@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FluxoCaixa.Migrations
 {
     [DbContext(typeof(FluxoContext))]
-    [Migration("20240819193137_All-Restrict")]
-    partial class AllRestrict
+    [Migration("20240822203359_All-Cascade")]
+    partial class AllCascade
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -77,6 +77,9 @@ namespace FluxoCaixa.Migrations
                     b.Property<DateTime>("DtRegistro")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("Fk_IdFluxoRegistro")
+                        .HasColumnType("int");
+
                     b.Property<int>("IdCategoria")
                         .HasColumnType("int");
 
@@ -134,20 +137,17 @@ namespace FluxoCaixa.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int?>("CategoriaIdCategoria")
-                        .HasColumnType("int");
-
                     b.Property<string>("DscTipoSubcategoria")
                         .IsRequired()
                         .HasMaxLength(40)
                         .HasColumnType("nvarchar(40)");
 
-                    b.Property<int?>("IdCategoria")
+                    b.Property<int>("IdCategoria")
                         .HasColumnType("int");
 
                     b.HasKey("IdSubcategoria");
 
-                    b.HasIndex("CategoriaIdCategoria");
+                    b.HasIndex("IdCategoria");
 
                     b.ToTable("Subcategoria");
                 });
@@ -199,7 +199,9 @@ namespace FluxoCaixa.Migrations
                 {
                     b.HasOne("WebApplication1.Models.Categoria", "Categoria")
                         .WithMany("Subcategorias")
-                        .HasForeignKey("CategoriaIdCategoria");
+                        .HasForeignKey("IdCategoria")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.Navigation("Categoria");
                 });
