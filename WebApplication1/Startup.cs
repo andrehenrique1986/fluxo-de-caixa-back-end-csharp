@@ -42,6 +42,7 @@ namespace WebApplication1
 
             services.AddScoped<ICategoriaService, CategoriaService>();
             services.AddScoped<ISubcategoriaService, SubcategoriaService>();
+            services.AddScoped<IFormaDePagamentoService, FormaDePagamentoService>();
             services.AddScoped<IRegistroService, RegistroService>();
             
 
