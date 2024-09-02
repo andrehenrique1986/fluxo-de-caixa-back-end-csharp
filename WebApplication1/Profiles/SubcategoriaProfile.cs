@@ -13,8 +13,8 @@ namespace FluxoCaixa.Profiles
         public SubcategoriaProfile()
         {
             CreateMap<CreateSubcategoriaDTO, Subcategoria>();
+            CreateMap<Subcategoria, ReadSubcategoriaDTO>();
             CreateMap<UpdateSubcategoriaDTO, Subcategoria>();
-            CreateMap<Subcategoria, UpdateSubcategoriaDTO>();
 
             CreateMap<Subcategoria, ReadSubcategoriaDTO>().
                 ForMember(subcategoriaDto => subcategoriaDto.Registros,

@@ -18,7 +18,9 @@ namespace WebApplication1.Models
         [Required(ErrorMessage = "A Descrição da Subcategoria é obrigatória")]
         [StringLength(40, MinimumLength = 2, ErrorMessage = "A Descrição da Subcategoria deve ter entre 2 e 40 caracteres.")]
         public string DscTipoSubcategoria { get; set; }
-        public int? IdCategoria { get; set; }
+        [Required]
+        public int IdCategoria { get; set; }
+        [ForeignKey("IdCategoria")]
         public virtual Categoria Categoria { get; set; }
         public virtual ICollection<Registro> Registros { get; set; }
 

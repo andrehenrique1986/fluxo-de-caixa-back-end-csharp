@@ -19,18 +19,28 @@ namespace FluxoCaixa.Models
 		[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
 		[Range(typeof(DateTime), "01/01/2000", "31/12/2099", ErrorMessage = "A data deve estar entre 01/01/2000 e 31/12/2099.")]
 		public DateTime DtRegistro { get; set; }
+		[Required]
 		public int IdFluxo { get; set; }
+		[ForeignKey("Fk_IdFluxoRegistro")]
 		public virtual Fluxo Fluxo { get; set; }
 		public int IdCategoria { get; set; }
+		[ForeignKey("IdFluxo")]
 		public virtual Categoria Categoria { set; get; }
+		[Required]
 		public int IdSubcategoria { get; set; }
+		[ForeignKey("IdSubcategoria")]
 		public virtual Subcategoria Subcategoria { set; get; }
+		[Required]
 		public int IdCusto { get; set; }
+		[ForeignKey("IdCusto")]
 		public virtual Custo Custo { set; get; }
+		[Required]
 		public int IdFormaDePagamento { get; set; }
+		[ForeignKey("IdFormaDePagamento")]
 		public virtual FormaDePagamento FormaDePagamento { set; get; }
 		[Required(ErrorMessage = "O valor deverá ser preenchido")]
 		[Range(0, double.MaxValue, ErrorMessage = "O Valor deverá ser maior ou igual a zero")]
 		public double ValorRegistro { get; set; }
-	}
+   
+    }
 }

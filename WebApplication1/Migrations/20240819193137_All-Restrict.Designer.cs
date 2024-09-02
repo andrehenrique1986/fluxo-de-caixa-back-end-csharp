@@ -4,14 +4,16 @@ using FluxoCaixa.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FluxoCaixa.Migrations
 {
     [DbContext(typeof(FluxoContext))]
-    partial class FluxoContextModelSnapshot : ModelSnapshot
+    [Migration("20240819193137_All-Restrict")]
+    partial class AllRestrict
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -75,9 +77,6 @@ namespace FluxoCaixa.Migrations
                     b.Property<DateTime>("DtRegistro")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("Fk_IdFluxoRegistro")
-                        .HasColumnType("int");
-
                     b.Property<int>("IdCategoria")
                         .HasColumnType("int");
 
@@ -135,17 +134,20 @@ namespace FluxoCaixa.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<int?>("CategoriaIdCategoria")
+                        .HasColumnType("int");
+
                     b.Property<string>("DscTipoSubcategoria")
                         .IsRequired()
                         .HasMaxLength(40)
                         .HasColumnType("nvarchar(40)");
 
-                    b.Property<int>("IdCategoria")
+                    b.Property<int?>("IdCategoria")
                         .HasColumnType("int");
 
                     b.HasKey("IdSubcategoria");
 
-                    b.HasIndex("IdCategoria");
+                    b.HasIndex("CategoriaIdCategoria");
 
                     b.ToTable("Subcategoria");
                 });
@@ -197,9 +199,7 @@ namespace FluxoCaixa.Migrations
                 {
                     b.HasOne("WebApplication1.Models.Categoria", "Categoria")
                         .WithMany("Subcategorias")
-                        .HasForeignKey("IdCategoria")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CategoriaIdCategoria");
 
                     b.Navigation("Categoria");
                 });

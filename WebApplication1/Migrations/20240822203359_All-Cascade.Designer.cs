@@ -4,14 +4,16 @@ using FluxoCaixa.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FluxoCaixa.Migrations
 {
     [DbContext(typeof(FluxoContext))]
-    partial class FluxoContextModelSnapshot : ModelSnapshot
+    [Migration("20240822203359_All-Cascade")]
+    partial class AllCascade
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -198,7 +200,7 @@ namespace FluxoCaixa.Migrations
                     b.HasOne("WebApplication1.Models.Categoria", "Categoria")
                         .WithMany("Subcategorias")
                         .HasForeignKey("IdCategoria")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Categoria");

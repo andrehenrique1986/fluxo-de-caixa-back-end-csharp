@@ -3,6 +3,7 @@ using Enums;
 using FluxoCaixa.Context;
 using FluxoCaixa.DTO;
 using FluxoCaixa.Enums;
+using FluxoCaixa.Interfaces;
 using FluxoCaixa.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -13,19 +14,22 @@ using System.Threading.Tasks;
 namespace FluxoCaixa.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class FormaDePagamentoController : ControllerBase
     {
         private readonly FluxoContext _context;
+        private readonly IFormaDePagamentoService _service;
         private readonly IMapper _mapper;
-        public FormaDePagamentoController(FluxoContext context, IMapper mapper)
+
+        public FormaDePagamentoController(FluxoContext context, IMapper mapper, IFormaDePagamentoService service)
         {
             _context = context;
             _mapper = mapper;
+            _service = service;
         }
 
         // Adiciona uma nova Forma de Pagamento
-        [HttpPost("adicionarFormaDePagamento")]
+        [HttpPost("api/adicionarFormaDePagamento")]
         public IActionResult AdicionarFormaDePagemanto(
             [FromBody] CreateFormaDePagamentoDTO formaDePagamentoDTO)
         {
@@ -42,23 +46,23 @@ namespace FluxoCaixa.Controllers
             {
 
                 return StatusCode(500, $"Erro interno do servidor: {e.Message}");
-            } 
+            }
         }
 
 
 
         // Recupera os Tipos de Forma de pagamento
-        [HttpGet("recuperarFormaDePagamento")]
-        public IActionResult RecuperaFormaDePagamento()
+        [HttpGet("api/recuperarFormaDePagamento")]
+        public IActionResult RecuperarFormaDePagamento()
         {
             try
             {
                 var formaDePagamento = _context.FormasDePagamento
                    .Select(f => new
-            {
-                Id = f.IdFormaDePagamento,
-                Nome = f.TipoFormaDePagamento
-                  }).ToList();
+                   {
+                       Id = f.IdFormaDePagamento,
+                       Nome = f.TipoFormaDePagamento
+                   }).ToList();
                 return Ok(formaDePagamento);
             }
             catch (Exception e)
@@ -69,7 +73,7 @@ namespace FluxoCaixa.Controllers
         }
 
         // Recupera as Formas de Pagamento pelo id
-        [HttpGet("recuperarFormaDePagamentoPorId/{id}")]
+        [HttpGet("api/recuperarFormaDePagamentoporId/{id}")]
         public IActionResult RecuperarFormasDePagamentoPorId(int id)
         {
             try
@@ -77,10 +81,10 @@ namespace FluxoCaixa.Controllers
                 var formaDePagamento = _context.FormasDePagamento
                .Where(f => f.IdFormaDePagamento == id)
                .Select(c => new
-                {
-                  Id = c.IdFormaDePagamento,
-                  Nome = c.TipoFormaDePagamento
-                 }).ToList();
+               {
+                   Id = c.IdFormaDePagamento,
+                   Nome = c.TipoFormaDePagamento
+               }).ToList();
 
                 if (formaDePagamento == null || formaDePagamento.Count == 0)
                 {
@@ -92,34 +96,39 @@ namespace FluxoCaixa.Controllers
             {
                 return StatusCode(500, $"Erro interno do servidor: {e.Message}");
             }
-                
+
         }
 
-        // Realiza a Alteração das Categorias
-        [HttpPut("atualizarFormaDePagamento/{id}")]
-        public IActionResult AtualizarFormaDePagamento(int id, [FromBody] UpdateFormaDePagamentoDTO formaDePagamentoDTO)
+        // Método para atualizar uma forma de pagamento
+        [HttpPut("api/atualizarFormaDePagamento/{id}")]
+        public async Task<IActionResult> AtualizarFormaDePagamento(int id, [FromBody] UpdateFormaDePagamentoDTO formaDePagamentoDTO)
         {
+            if (id <= 0)
+            {
+                return BadRequest("ID inválido.");
+            }
+
             try
             {
-                FormaDePagamento formaDePagamento = _context.FormasDePagamento.FirstOrDefault(f => f.IdFormaDePagamento == id);
-                if (formaDePagamento == null)
+                // Chama o método de serviço para atualizar a forma de pagamento
+                var sucesso = await _service.AlterarFormaDePagamento(id, formaDePagamentoDTO);
+
+                if (!sucesso)
                 {
-                    return NotFound();
+                    return NotFound("Forma de pagamento não encontrada.");
                 }
-                _mapper.Map(formaDePagamentoDTO, formaDePagamento);
-                _context.SaveChanges();
-                return NoContent();
+
+                return NoContent(); 
             }
             catch (Exception e)
             {
 
                 return StatusCode(500, $"Erro interno do servidor: {e.Message}");
             }
-            
         }
 
-        // Exclui as Categorias
-        [HttpDelete("excluirFormaDePagamento/{id}")]
+        // Exclui as Formas de Pagamento
+        [HttpDelete("api/excluirFormaDePagamento/{id}")]
         public IActionResult ExcluirFormaDePagamento(int id)
         {
             try
@@ -137,8 +146,10 @@ namespace FluxoCaixa.Controllers
             {
 
                 return StatusCode(500, $"Erro interno do servidor: {e.Message}");
-            } 
+            }
         }
+
     }
 }
+
     
