@@ -7,19 +7,29 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using System;
 using FluxoCaixa.DTO;
+using AutoMapper;
 
 namespace FluxoCaixa.Services
 {
     public class RegistroService : IRegistroService
     {
         private readonly FluxoContext _context;
+        private readonly IMapper _mapper;
 
 
-        public RegistroService(FluxoContext context)
+        public RegistroService(FluxoContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
+        public async Task<bool> AddRegistro(CreateRegistroDTO dto)
+        {
+            var registro = _mapper.Map<Registro>(dto);
+            _context.Registros.Add(registro);
+            await _context.SaveChangesAsync();
+            return true;
+        }
 
         public async Task<double> CalcularRegistroPorCategoria(int categoriaId)
         {
