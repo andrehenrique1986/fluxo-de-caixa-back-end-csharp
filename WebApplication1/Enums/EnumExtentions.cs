@@ -11,7 +11,7 @@ namespace FluxoCaixa.Enums
     {
         public static string GetDisplayName(this Enum enumValue)
         {
-            var displayAttribute = enumValue.GetType()
+            var displayAttribute = enumValue?.GetType()
                 .GetField(enumValue.ToString())
                 .GetCustomAttribute<DisplayAttribute>();
 
