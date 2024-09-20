@@ -19,7 +19,7 @@ namespace FluxoCaixa.Controllers
         private readonly FluxoContext _context;
         private readonly IMapper _mapper;
         private readonly IRegistroService _registroService;
-       
+
 
         public RegistroController(FluxoContext context, IMapper mapper, IRegistroService registroService)
         {
@@ -65,12 +65,18 @@ namespace FluxoCaixa.Controllers
                     {
                         Id = r.IdRegistro,
                         DataRegistro = r.DtRegistro,
+                        IdCategoria = r.IdCategoria,
                         CategoriaNome = r.Categoria.DscTipoCategoria,
+                        IdSubcategoria = r.IdSubcategoria,
                         SubcategoriaNome = r.Subcategoria.DscTipoSubcategoria,
                         TipoDeCusto = r.Custo.DscTipoCusto,
                         TipoDeFluxo = r.Fluxo.DscTipoFluxo,
                         FormaDePagamento = r.FormaDePagamento.TipoFormaDePagamento,
-                        Valor = r.ValorRegistro
+                        Valor = r.ValorRegistro,
+                        IdFluxo = r.IdFluxo,
+                        IdCusto = r.IdCusto,
+                        IdFormaDePagamento = r.IdFormaDePagamento
+
                     }).ToList();
                 if (registros == null || !registros.Any()) return NotFound();
                 return Ok(registros);
@@ -140,10 +146,9 @@ namespace FluxoCaixa.Controllers
             }
             catch (Exception e)
             {
-
                 return StatusCode(500, $"Erro interno do servidor: {e.Message}");
             }
-  
+
         }
 
         // Exclui os Registros
@@ -245,7 +250,7 @@ namespace FluxoCaixa.Controllers
             try
             {
                 var valorRegistroPorCusto = await _registroService.CalcularRegistroPorCusto(idCusto);
-                
+
 
                 if (valorRegistroPorCusto == 0)
                 {
@@ -259,7 +264,7 @@ namespace FluxoCaixa.Controllers
                     NumberDecimalDigits = 2
                 };
 
-                var valorPorCusto = $"{valorRegistroPorCusto.ToString("N",formatInfo)}";
+                var valorPorCusto = $"{valorRegistroPorCusto.ToString("N", formatInfo)}";
 
                 return Ok(
                     new
@@ -300,7 +305,7 @@ namespace FluxoCaixa.Controllers
             }
         }
 
-        
+
         [HttpGet("api/calcularRegistroPorFluxo/{idFluxo}")]
         public async Task<IActionResult> CalcularRegistroPorFluxo(int idFluxo)
         {
@@ -315,7 +320,7 @@ namespace FluxoCaixa.Controllers
                     NumberDecimalDigits = 2
                 };
 
-                
+
 
                 return Ok(
                     new
@@ -325,7 +330,8 @@ namespace FluxoCaixa.Controllers
                         Saida = $"R${response.saida.ToString("N", formatInfo)}",
                         Saldo = $"R${response.saldo.ToString("N", formatInfo)}"
                     });
-            }catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return StatusCode(500, $"Erro interno do servidor: {e.Message}");
             }
