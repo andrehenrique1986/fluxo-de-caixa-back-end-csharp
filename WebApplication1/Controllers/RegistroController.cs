@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using FluxoCaixa.Context;
+using FluxoCaixa.Contracts;
 using FluxoCaixa.DTO;
 using FluxoCaixa.Interfaces;
 using FluxoCaixa.Models;
@@ -78,7 +79,8 @@ namespace FluxoCaixa.Controllers
                         IdFormaDePagamento = r.IdFormaDePagamento
 
                     }).ToList();
-                if (registros == null || !registros.Any()) return NotFound();
+                if (registros == null || !registros.Any()) 
+                    return Ok(registros);
                 return Ok(registros);
             }
 
@@ -153,22 +155,30 @@ namespace FluxoCaixa.Controllers
 
         // Exclui os Registros
         [HttpDelete("api/excluirRegistro/{id}")]
-        public IActionResult ExcluirRegistro(int id)
+        public ObjectResponse ExcluirRegistro(int id)
         {
             try
             {
                 Registro registro = _context.Registros.FirstOrDefault(r => r.IdRegistro == id);
+                ObjectResponse response = new ObjectResponse();
+
                 if (registro == null)
                 {
-                    return NotFound();
+                    throw new Exception("Não há registros");
                 }
                 _context.Remove(registro);
                 _context.SaveChanges();
-                return NoContent();
+
+                response.Status = true;
+                response.Message = "Registro excluído com sucesso";
+                return response;
             }
             catch (Exception e)
             {
-                return StatusCode(500, $"Erro interno do servidor: {e.Message}");
+                ObjectResponse response = new ObjectResponse();
+                response.Status = false;
+                response.Message = $"Erro interno: {e.Message}";
+                return response;
             }
         }
 
