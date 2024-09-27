@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace FluxoCaixa.Contracts
 {
-    public class ObjectResponse 
+    public class ObjectResponse
     {
         public int Id { get; set; }
         public bool Status { get; set; }

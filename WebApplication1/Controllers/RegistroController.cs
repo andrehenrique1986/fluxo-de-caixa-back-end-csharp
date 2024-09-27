@@ -118,7 +118,12 @@ namespace FluxoCaixa.Controllers
                     FormaDePagamento = r.FormaDePagamento.TipoFormaDePagamento,
                     Valor = r.ValorRegistro
                 }).ToList();
-                if (registros == null || !registros.Any()) return NotFound();
+                if (registros == null || !registros.Any()) 
+                    return NotFound(new ObjectResponse
+                {
+                    Status = false,
+                    Message = "Registro não encontrado."
+                }); ;
                 return Ok(registros);
             }
             catch (Exception e)
@@ -131,24 +136,30 @@ namespace FluxoCaixa.Controllers
 
         // Realiza a Alteração dos Registros
         [HttpPut("api/atualizarRegistro/{id}")]
-        public IActionResult AtualizarRegistro(int id, [FromBody] UpdateRegistroDTO registroDto)
+        public ObjectResponse AtualizarRegistro(int id, [FromBody] UpdateRegistroDTO registroDto)
         {
             try
             {
                 Registro registro = _context.Registros.FirstOrDefault(registro => registro.IdRegistro == id);
+                ObjectResponse response = new ObjectResponse();
                 if (registro == null)
                 {
-                    return NotFound();
+                    throw new Exception("Não há registros cadastrados");
                 }
 
                 _context.Entry<Registro>(registro).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
                 _mapper.Map(registroDto, registro);
                 _context.SaveChanges();
-                return NoContent();
+                response.Status = true;
+                response.Message = "Registro excluído com sucesso";
+                return response;
             }
             catch (Exception e)
             {
-                return StatusCode(500, $"Erro interno do servidor: {e.Message}");
+                ObjectResponse response = new ObjectResponse();
+                response.Status = false;
+                response.Message = $"Erro interno: {e.Message}";
+                return response;
             }
 
         }
@@ -164,7 +175,7 @@ namespace FluxoCaixa.Controllers
 
                 if (registro == null)
                 {
-                    throw new Exception("Não há registros");
+                    throw new Exception("Não há registros cadastrados");
                 }
                 _context.Remove(registro);
                 _context.SaveChanges();
@@ -191,10 +202,7 @@ namespace FluxoCaixa.Controllers
             {
                 var valorCategoria = await _registroService.CalcularRegistroPorCategoria(idCategoria);
 
-                if (valorCategoria == 0)
-                {
-                    return NotFound("Nenhum registro encontrado para a categoria especificada.");
-                }
+                
 
                 var formatInfo = new NumberFormatInfo
                 {
@@ -226,11 +234,7 @@ namespace FluxoCaixa.Controllers
             {
                 var valorFormaDePagamento = await _registroService.CalcularRegistroPorFormaDePagamento(idFormaDePagamento);
 
-                if (valorFormaDePagamento == 0)
-                {
-                    return NotFound("Nenhum registro encontrado para a forma de pagamento especificada.");
-                }
-
+                
                 var formatInfo = new NumberFormatInfo
                 {
                     NumberDecimalSeparator = ",",
@@ -262,7 +266,7 @@ namespace FluxoCaixa.Controllers
                 var valorRegistroPorCusto = await _registroService.CalcularRegistroPorCusto(idCusto);
 
 
-                if (valorRegistroPorCusto == 0)
+                if (valorRegistroPorCusto < 0)
                 {
                     return NotFound("Nenhum registro encontrado para o tipo de custo especificado.");
                 }
@@ -306,7 +310,7 @@ namespace FluxoCaixa.Controllers
                     new
                     {
                         CustoId = idCusto,
-                        ValorTotalRegistro = $"{percentualPorCusto:F0}%"
+                        ValorTotalRegistro = $"{percentualPorCusto:F0}"
                     });
             }
             catch (Exception e)
@@ -329,8 +333,6 @@ namespace FluxoCaixa.Controllers
                     NumberGroupSeparator = ".",
                     NumberDecimalDigits = 2
                 };
-
-
 
                 return Ok(
                     new

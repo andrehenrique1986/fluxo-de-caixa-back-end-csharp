@@ -17,5 +17,6 @@ namespace FluxoCaixa.Interfaces
         Task<double> CalcularTotalGeral();
         Task<RegistroPorFluxoDTO> CalcularRegistroPorFluxo(int idFluxo);
         Task<double> CalcularPorcentagemPorCusto(int custoId);
+        //Task<double> CalcularPorcentagemCustos();
     }
 }

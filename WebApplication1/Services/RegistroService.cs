@@ -51,9 +51,9 @@ namespace FluxoCaixa.Services
 
         public async Task<double> CalcularRegistroPorCusto(int custoId)
         {
-            return await _context.Registros
-                .Where(c => c.IdCusto == custoId)
-                .SumAsync(r => r.ValorRegistro);
+                return await _context.Registros
+                    .Where(c => c.IdCusto == custoId)
+                    .SumAsync(r => r.ValorRegistro);
 
         }
 
@@ -81,7 +81,8 @@ namespace FluxoCaixa.Services
             return porcentagem;
         }
 
-        public async Task<RegistroPorFluxoDTO> CalcularRegistroPorFluxo(int idFluxo)
+     
+            public async Task<RegistroPorFluxoDTO> CalcularRegistroPorFluxo(int idFluxo)
         {
             double entrada = 0;
             double saida = 0;
