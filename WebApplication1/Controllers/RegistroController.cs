@@ -79,7 +79,7 @@ namespace FluxoCaixa.Controllers
                         IdFormaDePagamento = r.IdFormaDePagamento
 
                     }).ToList();
-                if (registros == null || !registros.Any()) 
+                if (registros == null || !registros.Any())
                     return Ok(registros);
                 return Ok(registros);
             }
@@ -111,19 +111,24 @@ namespace FluxoCaixa.Controllers
                 {
                     Id = r.IdRegistro,
                     DataRegistro = r.DtRegistro,
+                    IdCategoria = r.IdCategoria,
                     CategoriaNome = r.Categoria.DscTipoCategoria,
+                    IdSubcategoria = r.IdSubcategoria,
                     SubcategoriaNome = r.Subcategoria.DscTipoSubcategoria,
                     TipoDeCusto = r.Custo.DscTipoCusto,
                     TipoDeFluxo = r.Fluxo.DscTipoFluxo,
                     FormaDePagamento = r.FormaDePagamento.TipoFormaDePagamento,
-                    Valor = r.ValorRegistro
+                    Valor = r.ValorRegistro,
+                    IdFluxo = r.IdFluxo,
+                    IdCusto = r.IdCusto,
+                    IdFormaDePagamento = r.IdFormaDePagamento
                 }).ToList();
-                if (registros == null || !registros.Any()) 
+                if (registros == null || !registros.Any())
                     return NotFound(new ObjectResponse
-                {
-                    Status = false,
-                    Message = "Registro não encontrado."
-                }); ;
+                    {
+                        Status = false,
+                        Message = "Registro não encontrado."
+                    }); ;
                 return Ok(registros);
             }
             catch (Exception e)
@@ -202,7 +207,7 @@ namespace FluxoCaixa.Controllers
             {
                 var valorCategoria = await _registroService.CalcularRegistroPorCategoria(idCategoria);
 
-                
+
 
                 var formatInfo = new NumberFormatInfo
                 {
@@ -234,7 +239,7 @@ namespace FluxoCaixa.Controllers
             {
                 var valorFormaDePagamento = await _registroService.CalcularRegistroPorFormaDePagamento(idFormaDePagamento);
 
-                
+
                 var formatInfo = new NumberFormatInfo
                 {
                     NumberDecimalSeparator = ",",
@@ -348,5 +353,50 @@ namespace FluxoCaixa.Controllers
                 return StatusCode(500, $"Erro interno do servidor: {e.Message}");
             }
         }
+
+
+        [HttpGet("api/filtrarRegistrosPorData")]
+        public IActionResult FiltrarRegistrosPorData(DateTime? dataInicial, DateTime? dataFinal)
+        {
+            try
+            {
+                var registros = _context.Registros
+                    .Include(cat => cat.Categoria)
+                    .Include(subCat => subCat.Subcategoria)
+                    .Include(cst => cst.Custo)
+                    .Include(fl => fl.Fluxo)
+                    .Include(foPag => foPag.FormaDePagamento)
+                    .Where(r => r.DtRegistro >= dataInicial.Value && r.DtRegistro <= dataFinal.Value)
+                    .Select(r =>
+                    new
+                    {
+                        Id = r.IdRegistro,
+                        DataRegistro = r.DtRegistro,
+                        IdCategoria = r.IdCategoria,
+                        CategoriaNome = r.Categoria.DscTipoCategoria,
+                        IdSubcategoria = r.IdSubcategoria,
+                        SubcategoriaNome = r.Subcategoria.DscTipoSubcategoria,
+                        TipoDeCusto = r.Custo.DscTipoCusto,
+                        TipoDeFluxo = r.Fluxo.DscTipoFluxo,
+                        FormaDePagamento = r.FormaDePagamento.TipoFormaDePagamento,
+                        Valor = r.ValorRegistro,
+                        IdFluxo = r.IdFluxo,
+                        IdCusto = r.IdCusto,
+                        IdFormaDePagamento = r.IdFormaDePagamento
+
+                    }).ToList();
+                if (registros == null || !registros.Any())
+                    return Ok(registros);
+                return Ok(registros);
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, $"Erro interno do servidor: {e.Message}");
+            }
+
+        }
+
     }
+
 }
+

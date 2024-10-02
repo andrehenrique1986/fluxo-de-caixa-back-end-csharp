@@ -18,5 +18,8 @@ namespace FluxoCaixa.DTO
         public int IdCusto { get; set; }
         public int IdFormaDePagamento { get; set; }
         public double ValorRegistro { get; set; }
+        public int Id { get; internal set; }
+        public DateTime DataRegistro { get; set; }
+        public double Valor { get; internal set; }
     }
 }
