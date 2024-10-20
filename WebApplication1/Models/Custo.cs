@@ -21,5 +21,10 @@ namespace FluxoCaixa.Models
         public EnTipoCusto TipoCusto { get; set; }
         public string DscTipoCusto => TipoCusto.GetDisplayName();
         public virtual ICollection<Registro> Registros { get; set; }
+
+        internal object Select(Func<object, object> p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

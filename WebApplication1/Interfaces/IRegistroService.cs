@@ -10,6 +10,7 @@ namespace FluxoCaixa.Interfaces
 {
     public interface IRegistroService
     {
+        Task<bool> AddRegistro(CreateRegistroDTO dto);
         Task<double> CalcularRegistroPorCategoria(int categoriaId);
         Task<double> CalcularRegistroPorFormaDePagamento(int formaDePagamentoId);
         Task<double> CalcularRegistroPorCusto(int custoId);

@@ -21,5 +21,9 @@ namespace WebApplication1.Models
         public virtual ICollection<Subcategoria> Subcategorias { get; set; }
         public virtual ICollection<Registro> Registros { get; set; }
 
+        internal object Select(Func<object, object> p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
